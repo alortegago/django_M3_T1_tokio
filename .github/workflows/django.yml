@@ -11,7 +11,8 @@ jobs:
     runs-on: ubuntu-latest # El sistema operativo donde se ejecutará el workflow
     strategy:
       matrix:
-        python-version: [3.7, 3.8, 3.9] # Probar distintas versiones de Python
+        python-version: [3.8, 3.9] # Probar distintas versiones de Python
+# el runner de GitHub Actions no tiene disponible la versión 3.7 de Python para la arquitectura x64.
     steps:
       - uses: actions/checkout@v2 # Descarga el código del repositorio
       - name: Set up Python ${{ matrix.python-version }}
