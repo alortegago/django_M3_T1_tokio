@@ -21,7 +21,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip # Actualiza pip
-          pip install -r django_M3_T1_tokio/requirements.txt # Instala las dependencias del proyecto
+          pip install -r /github/requirements.txt # Instala las dependencias del proyecto
       - name: Run tests
         run: |
           python manage.py test # Ejecuta las pruebas unitarias de Django
